@@ -1,0 +1,43 @@
+
+
+<div style="margin-bottom: 1em;">
+    <h3 style="display:inline;">Mark Mahoney - Courses</h3>
+    <span class="pull-right"><b>Search: </b><input type="text" ng-model="Search" /></span>
+</div>
+
+
+<div class="thumbnail">
+    <div class="caption-full">
+
+        <!--Course List-->
+        <table class="table table-striped table-hover" style="height: 450px;">
+            <thead>
+                <tr>
+                    <th class="col-md-2" ng-click="SortByName()"><label class="glyphicon glyphicon-arrow-down">Name</label></th>
+                    <th ng-click="SortByDescription()"><label class="glyphicon glyphicon-arrow-down">Description</label></th>
+                    <th ng-click="SortByTerm()"><label class="glyphicon glyphicon-arrow-down">Term</label></th>
+                    <th ng-click="SortByYear()"><label class="glyphicon glyphicon-arrow-down">Year</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="course in courses | orderBy: SelectedSort | filter: Search  | startFrom: currentPage2*pageSize2 | limitTo: pageSize2">
+                    <td><a ng-href="/#/course/{{ course.course_id }}">{{ course.name }} <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td>{{ course.description }}</td>
+                    <td>{{ course.term }}</td>
+                    <td>{{ course.year }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div>
+            <button ng-disabled="currentPage2 == 0" ng-click="currentPage2=currentPage2-1">
+                Previous
+            </button>
+            {{currentPage2+1}}/{{numberOfPages2()}}
+            <button ng-disabled="currentPage2 >= courses.length/pageSize2 - 1" ng-click="currentPage2=currentPage2+1">
+                Next
+            </button>
+        </div>
+    </div>
+</div>

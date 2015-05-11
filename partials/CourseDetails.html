@@ -1,0 +1,57 @@
+
+
+<div style="margin-bottom: 2em;">
+    <h3 style="display:inline;">Mark Mahoney - Courses</h3>
+</div>
+
+<a href="/#/mycourses" class="glyphicon glyphicon-arrow-left" style="font-size: 18px;"> Back</a>
+
+<div class="thumbnail">
+    <div class="caption-full">
+        
+
+        <!--Course List-->
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th class="col-md-8">Data</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Course Name: </td>
+                <td>
+                    <span id="label_name" >{{ SelectedCourse.name }}</span>
+                    <input id="input_name" type="text" class="hidden" ng-model="SelectedCourse.name" />
+                </td>
+                <td ng-click="EditName()"><button class="glyphicon glyphicon-edit"></button></td>
+            </tr>
+            <tr>
+                <td>Description: </td>
+                <td>
+                    <span id="label_description">{{ SelectedCourse.description }}</span>
+                    <textarea id="input_description" type="text" class="col-md-12 hidden" ng-model="SelectedCourse.description" />
+                </td>
+                <td ng-click="EditDescription()"><button class="glyphicon glyphicon-edit"></button></td>
+            </tr>
+            <tr>
+                <td>Term: </td>
+                <td>
+                    <span id="label_term">{{ SelectedCourse.term }}</span>
+                    <input id="input_term" type="text" class="hidden" ng-model="SelectedCourse.term" />
+                </td>
+                <td ng-click="EditTerm()"><button class="glyphicon glyphicon-edit"></button></td>
+            </tr>
+            <tr>
+                <td>Year: </td>
+                <td>
+                    <span id="label_year">{{ SelectedCourse.year }}</span>
+                    <input id="input_year" type="text" class="hidden" ng-model="SelectedCourse.year" />
+                </td>
+                <td ng-click="EditYear()"><button class="glyphicon glyphicon-edit"></button></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
