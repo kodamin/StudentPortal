@@ -8,23 +8,23 @@ angular.module('SchoolModule', ['ngRoute'])
     $routeProvider
         .when('/allcourses',
         {
-            templateUrl: '~/partials/AllCourses.html',
+            templateUrl: '../StudentPortal/partials/AllCourses.html',
             controller: 'SchoolController'
         })
         .when('/mycourses',
         {
-            templateUrl: '~/partials/MyCourses.html',
+            templateUrl: '../StudentPortal/partials/MyCourses.html',
             controller: 'SchoolController'
         })
         .when('/course/:id', {
-            templateUrl: '~/partials/CourseDetails.html',
+            templateUrl: '../StudentPortal/partials/CourseDetails.html',
             controller: 'SchoolController'
         })
         .when('/about', {
-            templateUrl: '~/partials/About.html'
+            templateUrl: '../StudentPortal/partials/About.html'
         })
         .when('/contact', {
-            templateUrl: '~/partials/Contact.html',
+            templateUrl: '../StudentPortal/partials/Contact.html',
             controller: 'SchoolController'
         })
         .otherwise(
