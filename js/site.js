@@ -6,30 +6,30 @@ angular.module('SchoolModule', ['ngRoute'])
 .config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
-        .when('StudentPortal/allcourses',
+        .when('/allcourses',
         {
             templateUrl: '/partials/AllCourses.html',
             controller: 'SchoolController'
         })
-        .when('StudentPortal/mycourses',
+        .when('/mycourses',
         {
             templateUrl: '/partials/MyCourses.html',
             controller: 'SchoolController'
         })
-        .when('StudentPortal/course/:id', {
+        .when('/course/:id', {
             templateUrl: '/partials/CourseDetails.html',
             controller: 'SchoolController'
         })
-        .when('StudentPortal/about', {
+        .when('/about', {
             templateUrl: '/partials/About.html'
         })
-        .when('StudentPortal/contact', {
+        .when('/contact', {
             templateUrl: '/partials/Contact.html',
             controller: 'SchoolController'
         })
         .otherwise(
         {
-            redirectTo: 'StudentPortal/allcourses' 
+            redirectTo: '/allcourses' 
         });
 }])
 
