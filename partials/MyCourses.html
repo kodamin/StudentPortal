@@ -21,7 +21,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="course in courses | orderBy: SelectedSort | filter: Search  | startFrom: currentPage2*pageSize2 | limitTo: pageSize2">
-                    <td><a ng-href="/#/course/{{ course.course_id }}">{{ course.name }} <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td><a ng-href="StudentPortal/#/course/{{ course.course_id }}">{{ course.name }} <span class="glyphicon glyphicon-edit"></span></a></td>
                     <td>{{ course.description }}</td>
                     <td>{{ course.term }}</td>
                     <td>{{ course.year }}</td>
