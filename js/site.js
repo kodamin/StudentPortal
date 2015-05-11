@@ -29,7 +29,7 @@ angular.module('SchoolModule', ['ngRoute'])
         })
         .otherwise(
         {
-            redirectTo: 'StudentPortal/allcourses' 
+            redirectTo: '/allcourses' 
         });
 }])
 
