@@ -8,17 +8,17 @@
   background-color: #d5d5d5;
 }
 
-body {
-    background-color: lightgray;
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
-
 .navbar-inverse .navbar-brand {
   color: white;
 }
 
 .navbar-inverse .navbar-nav > li > a {
   color: white;
+}
+
+body {
+    background-color: lightgray;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .my-navbar {
