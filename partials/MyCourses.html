@@ -19,7 +19,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="course in courses | orderBy: SelectedSort | filter: Search  | startFrom: currentPage2*pageSize2 | limitTo: pageSize2">
-                    <td><a ng-href="/#/course/{{ course.course_id }}">{{ course.name }} <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td><a ng-href="#/course/{{ course.course_id }}">{{ course.name }} <span class="glyphicon glyphicon-edit"></span></a></td>
                     <td>{{ course.description }}</td>
                     <td>{{ course.term }}</td>
                     <td>{{ course.year }}</td>
@@ -42,6 +42,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 <!-- Popup -->
 <div id="dialog_course" style="display: none;">
@@ -85,3 +86,5 @@
         });
     });
 </script>
+=======
+>>>>>>> 6e992ba93661d6c72b984b121f173bd31520c2cf
