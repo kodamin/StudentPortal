@@ -4,22 +4,25 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+
+body {
+    background-color: #d5d5d5;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #d5d5d5;
 }
 
 .navbar-inverse .navbar-brand {
-  color: white;
+  color: #ffffff;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: white;
+  color: #ffffff;
 }
 
-body {
-    background-color: lightgray;
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
 
 .my-navbar {
     background: rgb(59,103,158); /* Old browsers */
@@ -57,13 +60,12 @@ footer {
 }
 
 th:hover {
-    color: white;
+    color: #ffffff;
     background-color: #337ab0;
 }
 
 label:hover {
-    color: white;
+    color: #ffffff;
     background-color: #337ab0;
 }
 
- 
