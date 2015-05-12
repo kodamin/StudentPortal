@@ -1,5 +1,3 @@
-
-
 <div style="margin-bottom: 1em;">
     <h3 style="display:inline;">Mark Mahoney - Courses</h3>
     <span class="pull-right"><b>Search: </b><input type="text" ng-model="Search" /></span>
@@ -29,8 +27,8 @@
             </tbody>
         </table>
 
-        <!-- Pagination -->
         <div>
+            <!-- Pagination -->
             <button ng-disabled="currentPage2 == 0" ng-click="currentPage2=currentPage2-1">
                 Previous
             </button>
@@ -38,6 +36,52 @@
             <button ng-disabled="currentPage2 >= courses.length/pageSize2 - 1" ng-click="currentPage2=currentPage2+1">
                 Next
             </button>
+
+            <!-- Add Course -->
+            <button id="button_course" class="pull-right">Add Course</button>
         </div>
     </div>
 </div>
+
+<!-- Popup -->
+<div id="dialog_course" style="display: none;">
+    <table class="table">
+        <tr>
+            <td>Course Name</td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><textarea></textarea></td>
+        </tr>
+        <tr>
+            <td>Term</td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td><input type="text"/></td>
+        </tr>
+    </table>
+</div>
+
+
+<script>
+    // jQuery
+    $(document).ready(function () {
+
+        $("#button_course").click(function () {
+            $("#dialog_course").dialog({
+                //autoOpen: false
+                title: "Add Course (work in progress)",
+                width: 400,
+                height: 400,
+                modal: true,
+                buttons: [
+                    { text: 'Add', click: function () {  } },
+                    { text: 'Cancel', click: function () { $(this).dialog('close'); } }
+                ]
+            });
+        });
+    });
+</script>
