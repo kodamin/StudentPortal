@@ -1,5 +1,7 @@
 /// <reference path="../typings/angularjs/angular.d.ts"/>
 
+
+
 // Angular
 angular.module('SchoolModule', ['ngRoute'])
 
@@ -29,13 +31,12 @@ angular.module('SchoolModule', ['ngRoute'])
         })
         .otherwise(
         {
-            redirectTo: '/allcourses' 
+            redirectTo: '/allcourses'
         });
 }])
 
 .controller('SchoolController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
 
-    
     // All Courses
     $scope.allcourses = [];
     $http.get('data/allcourses.json').success(function (data) {
@@ -51,15 +52,18 @@ angular.module('SchoolModule', ['ngRoute'])
 
     // Courses
     $scope.courses = [];
-    $scope.SelectedCourse;
+    $scope.SelectedCourseId;
     $http.get('data/courses.json').success(function (data) {
         $scope.courses = data;
-
-        for (var i = 0; i < $scope.courses.length; i++) {
-            if ($scope.courses[i].course_id == $routeParams.id)
-                $scope.SelectedCourse = $scope.courses[i];
-        }
+        $scope.SelectedCourseId = $routeParams.id;
     });
+    $scope.GetCourse = function () {
+        for (var i = 0; i < $scope.courses.length; i++) {
+            if ($scope.courses[i].course_id == $routeParams.id) {
+                return $scope.courses[i];
+            }
+        }
+    }
 
     // Pagination
     $scope.currentPage2 = 0;
@@ -79,6 +83,8 @@ angular.module('SchoolModule', ['ngRoute'])
             $("#label_name").removeClass("hidden");
             $("#input_name").addClass("hidden");
         }
+        // update json
+
     };
     $scope.EditDescription = function () {
         if ($("#input_description:hidden").length) {
