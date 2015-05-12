@@ -22,8 +22,8 @@
             <tr>
                 <td>Course Name: </td>
                 <td>
-                    <span id="label_name" >{{ SelectedCourse.name }}</span>
-                    <input id="input_name" type="text" class="hidden" ng-model="SelectedCourse.name" />
+                    <span id="label_name" >{{ GetCourse().name }}</span>
+                    <input id="input_name" type="text" class="hidden" ng-model="GetCourse().name" />
                 </td>
                 <td ng-click="EditName()"><button class="glyphicon glyphicon-edit"></button></td>
             </tr>
