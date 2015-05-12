@@ -8,7 +8,7 @@
 
 body {
     background-color: #d5d5d5;
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 70px;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
@@ -16,20 +16,7 @@ body {
 }
 
 .navbar-inverse .navbar-brand {
-<<<<<<< HEAD
-  color: white;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: white;
-}
-
-body {
-    background-color: lightgray;
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-=======
   color: #ffffff;
->>>>>>> 34f2653ae8fc0c233a1798fc632fc482198ad190
 }
 
 .navbar-inverse .navbar-nav > li > a {
